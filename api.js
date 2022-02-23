@@ -9,6 +9,9 @@ app.use(express.json());
 var pg = require("pg-promise")(/*options*/);
 var { Client } = require('pg');
 
+
+
+
 var client = new Client({
   user: "nwmpqvvxenofxa",
   password: "b9ecb9382f235ffda326de765f57f7ed00d882084ed4ef5ee7d1cc090c5bf788",
@@ -20,6 +23,7 @@ var client = new Client({
 client.connect();
 
 app.get('/latest', (req, res) => {
+
   client.query('SELECT * FROM templog x WHERE x.m_time=(SELECT max(x.m_time) FROM templog x);')
     .then(function (data) {
       for (let row of data.rows) {
@@ -29,10 +33,21 @@ app.get('/latest', (req, res) => {
     .catch(function (error) {
       res.send(error)
     });
+
 })
 
 app.post('/add', (req, res) => {
-  let query = `INSERT INTO templog VALUES (${req.body.temp}, '${req.body.m_time}')`
+
+  var currentdate = new Date(); 
+  var datetime = currentdate.getFullYear() + "-"
+                + (currentdate.getMonth()+1)  + "-" 
+                + currentdate.getDate() + " "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+
+
+  let query = `INSERT INTO templog VALUES (${req.body.temp}, '${datetime}')`
   client.query(query)
     .then(function (data) {
       res.send(data)
