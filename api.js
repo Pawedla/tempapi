@@ -13,11 +13,11 @@ var { Client } = require('pg');
 
 
 var client = new Client({
-  user: "nwmpqvvxenofxa",
-  password: "b9ecb9382f235ffda326de765f57f7ed00d882084ed4ef5ee7d1cc090c5bf788",
-  database: "dca66vstun5di9",
+  user: "tobdtoorexjfoy",
+  password: "fc0c3fe412efdd7dd76992e423d3a794109d2b5fcf63495a863fd960bcd40e8d",
+  database: "d2s94ef0jbngij",
   port: 5432,
-  host: "ec2-52-31-217-108.eu-west-1.compute.amazonaws.com",
+  host: "    ec2-79-125-26-60.eu-west-1.compute.amazonaws.com",
   ssl: { rejectUnauthorized: false }
 });
 client.connect();
