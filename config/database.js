@@ -1,8 +1,8 @@
 import { Sequelize } from "sequelize";
 
  
-const db = new Sequelize('dca66vstun5di9', 'nwmpqvvxenofxa', '    b9ecb9382f235ffda326de765f57f7ed00d882084ed4ef5ee7d1cc090c5bf788', {
-    host: "    ec2-52-31-217-108.eu-west-1.compute.amazonaws.com",
+const db = new Sequelize('d2s94ef0jbngij', 'tobdtoorexjfoy', 'fc0c3fe412efdd7dd76992e423d3a794109d2b5fcf63495a863fd960bcd40e8d', {
+    host: "ec2-79-125-26-60.eu-west-1.compute.amazonaws.com",
     dialect: "postgres",
     dialectOptions: {
         ssl: {
