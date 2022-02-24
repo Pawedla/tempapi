@@ -17,7 +17,7 @@ var client = new Client({
   password: "fc0c3fe412efdd7dd76992e423d3a794109d2b5fcf63495a863fd960bcd40e8d",
   database: "d2s94ef0jbngij",
   port: 5432,
-  host: "    ec2-79-125-26-60.eu-west-1.compute.amazonaws.com",
+  host: "ec2-79-125-26-60.eu-west-1.compute.amazonaws.com",
   ssl: { rejectUnauthorized: false }
 });
 client.connect();
